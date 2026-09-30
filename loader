@@ -1,0 +1,8 @@
+script_key = tostring(getgenv().dna['Script Key'][1])
+
+if not script_key or script_key == "" or script_key:find("YOUR_KEY_HERE") then
+    game.Players.LocalPlayer:Kick("You forgot to put your key inside of ['Script Key'] = {}")
+    return
+end
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/4838002b93a4303bd87e0867230c048b.lua"))()
